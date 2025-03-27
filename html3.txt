@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Conversion</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <header id="navbar" class="navbar">
+        <div class="container">
+            <h1 class="logo">Attendance<span class="highlight">OS</span></h1>
+
+            <!-- Navigation Links -->
+            <nav class="nav-links">
+                <a href="/" class="nav-item"><i class="icon-dashboard"></i> Dashboard</a>
+                <a href="/students" class="nav-item"><i class="icon-users"></i> Students</a>
+                <a href="/attendance" class="nav-item"><i class="icon-calendar"></i> Attendance</a>
+                <a href="/reports" class="nav-item"><i class="icon-reports"></i> Reports</a>
+                <a href="/admin" class="nav-item"><i class="icon-settings"></i> Admin</a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="menu-btn">
+                ☰
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu hidden">
+        <button id="close-menu" class="close-menu">&times;</button>
+        <nav class="mobile-nav">
+            <a href="/" class="mobile-nav-item">Dashboard</a>
+            <a href="/students" class="mobile-nav-item">Students</a>
+            <a href="/attendance" class="mobile-nav-item">Attendance</a>
+            <a href="/reports" class="mobile-nav-item">Reports</a>
+            <a href="/admin" class="mobile-nav-item">Admin</a>
+        </nav>
+    </div>
+
+</body>
+</html>
