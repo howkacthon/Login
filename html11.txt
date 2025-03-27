@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Reports</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Reports</h1>
+            <p>Analyze attendance data and generate reports</p>
+        </header>
+        
+        <div class="controls">
+            <select id="time-period">
+                <option value="monthly">Monthly</option>
+                <option value="quarterly">Quarterly</option>
+                <option value="yearly" selected>Yearly</option>
+            </select>
+            <button onclick="printReport()">Print</button>
+            <button onclick="downloadReport()">Export</button>
+        </div>
+        
+        <div class="cards">
+            <div class="card">
+                <h2>86%</h2>
+                <p>Average Attendance</p>
+                <canvas id="lineChart"></canvas>
+            </div>
+            <div class="card">
+                <h2>92%</h2>
+                <p>Highest Attendance</p>
+                <canvas id="pieChart"></canvas>
+            </div>
+            <div class="card">
+                <h2>178</h2>
+                <p>Absent Students (Total)</p>
+                <canvas id="barChart"></canvas>
+            </div>
+        </div>
+        
+        <section class="reports">
+            <h2>Recent Reports</h2>
+            <ul>
+                <li>Monthly Attendance Summary - Oct 15, 2023 <button>Download</button></li>
+                <li>CS101 Class Report - Oct 10, 2023 <button>Download</button></li>
+                <li>Absent Student Analysis - Oct 5, 2023 <button>Download</button></li>
+                <li>Term Comparison Report - Sep 28, 2023 <button>Download</button></li>
+            </ul>
+        </section>
+    </div>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>
