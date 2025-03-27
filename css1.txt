@@ -1,0 +1,112 @@
+/* Root variables for theming */
+:root {
+    --border: 220, 13%, 91%;
+    --input: 214, 32%, 91%;
+    --ring: 222, 47%, 11%;
+    --background: 0, 0%, 100%;
+    --foreground: 222, 47%, 11%;
+
+    --primary: 222, 100%, 50%;
+    --primary-foreground: 0, 0%, 100%;
+
+    --secondary: 210, 40%, 96%;
+    --secondary-foreground: 222, 47%, 11%;
+
+    --muted: 210, 40%, 96%;
+    --muted-foreground: 215, 16%, 47%;
+
+    --accent: 216, 98%, 52%;
+    --accent-foreground: 0, 0%, 100%;
+
+    --card: 0, 0%, 100%;
+    --card-foreground: 222, 47%, 11%;
+
+    --sidebar-background: 220, 13%, 91%;
+    --sidebar-foreground: 222, 47%, 11%;
+
+    --radius: 12px;
+}
+
+/* Dark mode */
+.dark {
+    --background: 222, 47%, 11%;
+    --foreground: 0, 0%, 100%;
+    --primary: 222, 100%, 75%;
+    --secondary: 210, 30%, 20%;
+    --muted: 210, 30%, 25%;
+}
+
+/* General styles */
+body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: 'SF Pro Display', system-ui, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container */
+.container {
+    max-width: 1400px;
+    margin: auto;
+    padding: 2rem;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+}
+
+.btn-secondary {
+    background-color: hsl(var(--secondary));
+    color: hsl(var(--secondary-foreground));
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+}
+
+/* Typography */
+.primary-text {
+    color: hsl(var(--primary));
+    font-size: 2rem;
+}
+
+.muted-text {
+    color: hsl(var(--muted-foreground));
+    font-size: 1rem;
+}
+
+/* Card */
+.card {
+    background-color: hsl(var(--card));
+    color: hsl(var(--card-foreground));
+    padding: 20px;
+    border-radius: var(--radius);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 1rem;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: hsl(var(--sidebar-background));
+    color: hsl(var(--sidebar-foreground));
+    padding: 20px;
+    width: 250px;
+    border-radius: var(--radius);
+    margin-top: 20px;
+}
