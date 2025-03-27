@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Card</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="student-card">
+        <!-- Profile Section -->
+        <div class="profile">
+            <div class="profile-pic">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Alex Johnson">
+                <div class="status-indicator"></div>
+            </div>
+            <div class="profile-info">
+                <h3>Alex Johnson</h3>
+                <p class="student-id">S10001</p>
+            </div>
+            <button class="menu-btn">⋮</button>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="contact-info">
+            <div class="info">
+                <span class="icon">📧</span>
+                <span class="text">alex.j@example.com</span>
+            </div>
+            <div class="info">
+                <span class="icon">📞</span>
+                <span class="text">+1 (555) 123-4567</span>
+            </div>
+        </div>
+
+        <!-- Course and Attendance -->
+        <div class="course-attendance">
+            <span class="badge">Computer Science</span>
+            <div class="attendance">
+                <span>95%</span>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 95%;"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Buttons -->
+        <div class="card-footer">
+            <button class="btn secondary">Edit</button>
+            <button class="btn primary">View Attendance</button>
+        </div>
+    </div>
+
+</body>
+</html>
