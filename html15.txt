@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <!-- Navbar content here -->
+            <h1>Navbar</h1>
+        </nav>
+        <section class="content">
+            <div class="header">
+                <h1 class="title">Students</h1>
+                <p class="subtitle">Manage student information and records</p>
+            </div>
+            <div class="student-list">
+                <!-- Student list content here -->
+                <p>Student list will be displayed here.</p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
