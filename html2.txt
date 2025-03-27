@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converted Tailwind Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Main Container -->
+    <div class="container">
+        <h1 class="primary-text">Welcome to My Page</h1>
+        <p class="muted-text">This is a simple page using converted Tailwind styles.</p>
+
+        <!-- Buttons -->
+        <button class="btn-primary">Primary Button</button>
+        <button class="btn-secondary">Secondary Button</button>
+
+        <!-- Card -->
+        <div class="card">
+            <h2 class="card-title">Card Title</h2>
+            <p class="card-text">This is a simple card component styled with CSS.</p>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <p>Sidebar Content</p>
+        </aside>
+    </div>
+
+</body>
+</html>
