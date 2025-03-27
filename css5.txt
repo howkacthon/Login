@@ -1,0 +1,75 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Stat Card Styling */
+.stat-card {
+    background: white;
+    width: 250px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.stat-card:hover {
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+/* Stat Content Layout */
+.stat-card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Stat Info */
+.stat-title {
+    font-size: 14px;
+    color: #666;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.stat-value {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.stat-trend {
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.stat-trend.positive {
+    color: green;
+}
+
+.stat-trend.negative {
+    color: red;
+}
+
+.trend-text {
+    color: #666;
+    margin-left: 5px;
+}
+
+/* Stat Icon */
+.stat-icon {
+    font-size: 30px;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 6px;
+}
