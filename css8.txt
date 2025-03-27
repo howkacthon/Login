@@ -1,0 +1,65 @@
+const students = [
+    { id: 1, name: "Alex Johnson", studentId: "S10001", email: "alex.j@example.com", phone: "+1 (555) 123-4567", course: "Computer Science", attendance: 95, profilePic: "https://randomuser.me/api/portraits/men/32.jpg" },
+    { id: 2, name: "Samantha Lee", studentId: "S10002", email: "samantha.l@example.com", phone: "+1 (555) 234-5678", course: "Electrical Engineering", attendance: 88, profilePic: "https://randomuser.me/api/portraits/women/44.jpg" },
+    { id: 3, name: "David Chen", studentId: "S10003", email: "david.c@example.com", phone: "+1 (555) 345-6789", course: "Mechanical Engineering", attendance: 92, profilePic: "https://randomuser.me/api/portraits/men/46.jpg" },
+    { id: 4, name: "Emily Wilson", studentId: "S10004", email: "emily.w@example.com", phone: "+1 (555) 456-7890", course: "Business Administration", attendance: 78, profilePic: "https://randomuser.me/api/portraits/women/65.jpg" },
+    { id: 5, name: "Michael Brown", studentId: "S10005", email: "michael.b@example.com", phone: "+1 (555) 567-8901", course: "Data Science", attendance: 90, profilePic: "https://randomuser.me/api/portraits/men/58.jpg" },
+    { id: 6, name: "Jessica Davis", studentId: "S10006", email: "jessica.d@example.com", phone: "+1 (555) 678-9012", course: "Psychology", attendance: 85, profilePic: "https://randomuser.me/api/portraits/women/53.jpg" }
+];
+
+const studentList = document.getElementById("studentList");
+const searchInput = document.getElementById("searchInput");
+const noResults = document.getElementById("noResults");
+
+function displayStudents(studentArray) {
+    studentList.innerHTML = "";
+    if (studentArray.length === 0) {
+        noResults.classList.remove("hidden");
+    } else {
+        noResults.classList.add("hidden");
+        studentArray.forEach(student => {
+            const studentCard = document.createElement("div");
+            studentCard.classList.add("student-card");
+            studentCard.innerHTML = `
+                <img src="${student.profilePic}" alt="${student.name}">
+                <h3>${student.name}</h3>
+                <p>ID: ${student.studentId}</p>
+                <p>Email: ${student.email}</p>
+                <p>Phone: ${student.phone}</p>
+                <p>Course: ${student.course}</p>
+                <p>Attendance: ${student.attendance}%</p>
+            `;
+            studentList.appendChild(studentCard);
+        });
+    }
+}
+
+// Initial Display
+displayStudents(students);
+
+// Search Functionality
+searchInput.addEventListener("input", () => {
+    const query = searchInput.value.toLowerCase();
+    const filteredStudents = students.filter(student => 
+        student.name.toLowerCase().includes(query) ||
+        student.studentId.toLowerCase().includes(query) ||
+        student.course.toLowerCase().includes(query)
+    );
+    displayStudents(filteredStudents);
+});
+
+// Sorting Functions
+document.getElementById("sortName").addEventListener("click", () => {
+    students.sort((a, b) => a.name.localeCompare(b.name));
+    displayStudents(students);
+});
+
+document.getElementById("sortAttendance").addEventListener("click", () => {
+    students.sort((a, b) => b.attendance - a.attendance);
+    displayStudents(students);
+});
+
+document.getElementById("sortCourse").addEventListener("click", () => {
+    students.sort((a, b) => a.course.localeCompare(b.course));
+    displayStudents(students);
+});
